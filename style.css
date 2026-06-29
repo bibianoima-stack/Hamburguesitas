@@ -1,0 +1,473 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+  --rojo: #d62828;
+  --rojo-oscuro: #7f0000;
+  --amarillo: #ffbe0b;
+  --naranja: #fb8500;
+  --negro: #111111;
+  --carbon: #1b1b1b;
+  --gris: #f6f6f6;
+  --blanco: #ffffff;
+  --whatsapp: #25d366;
+  --verde: #198754;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(255, 190, 11, 0.14), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(214, 40, 40, 0.10), transparent 25%),
+    var(--gris);
+  color: var(--negro);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(17, 17, 17, 0.95), rgba(127, 0, 0, 0.88)),
+    radial-gradient(circle at top right, rgba(255, 190, 11, 0.5), transparent 30%);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(45deg, rgba(255,255,255,0.04) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255,255,255,0.04) 25%, transparent 25%);
+  background-size: 34px 34px;
+  opacity: 0.55;
+}
+
+.min-vh-hero {
+  min-height: 82vh;
+}
+
+.hero-badge {
+  background: rgba(255, 190, 11, 0.14);
+  color: var(--amarillo);
+  border: 1px solid rgba(255, 190, 11, 0.35);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  max-width: 560px;
+  font-size: 1.12rem;
+}
+
+.hero-food-card {
+  width: min(100%, 340px);
+  min-height: 370px;
+  border-radius: 34px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06));
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 28px 70px rgba(0,0,0,0.45);
+  display: grid;
+  place-items: center;
+  position: relative;
+  backdrop-filter: blur(8px);
+}
+
+.hero-food-card::before {
+  content: "🔥";
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  font-size: 3rem;
+  filter: drop-shadow(0 12px 16px rgba(0,0,0,0.4));
+}
+
+.burger-emoji {
+  font-size: 9rem;
+  filter: drop-shadow(0 18px 20px rgba(0,0,0,0.45));
+}
+
+.hero-food-label {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: rgba(0,0,0,0.72);
+  color: #fff;
+  border-radius: 22px;
+  padding: 16px;
+  text-align: center;
+}
+
+.hero-food-label span {
+  color: var(--amarillo);
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.hero-food-label strong {
+  font-size: 1.1rem;
+}
+
+/* =========================
+   BENEFICIOS
+========================= */
+
+.benefits-section {
+  background: #fff;
+}
+
+.benefit-card {
+  height: 100%;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, #fff8e6, #ffffff);
+  border: 1px solid rgba(251, 133, 0, 0.18);
+  padding: 18px 12px;
+  transition: 0.2s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.08);
+}
+
+.benefit-icon {
+  font-size: 2.1rem;
+  margin-bottom: 8px;
+}
+
+.benefit-card p {
+  margin: 0;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.section-badge {
+  display: inline-block;
+  background: var(--carbon);
+  color: var(--amarillo);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.card {
+  border: 0;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.product-card,
+.custom-card,
+.drink-card,
+.client-card,
+.account-card {
+  background: #fff;
+}
+
+.product-card {
+  border-top: 7px solid var(--rojo);
+}
+
+.custom-card {
+  border-top: 7px solid var(--naranja);
+}
+
+.drink-card {
+  border-top: 7px solid var(--amarillo);
+}
+
+.client-card {
+  border-top: 7px solid var(--carbon);
+}
+
+.account-card {
+  border-top: 7px solid var(--verde);
+}
+
+.product-icon {
+  min-width: 76px;
+  height: 76px;
+  border-radius: 24px;
+  display: grid;
+  place-items: center;
+  background: #fff1cc;
+  font-size: 2.6rem;
+}
+
+.product-icon.drink {
+  background: #e9f8ef;
+}
+
+.mini-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.78rem;
+}
+
+.price-box {
+  display: inline-block;
+  background: #fff3cd;
+  border: 1px solid rgba(255, 190, 11, 0.45);
+  color: #5d3800;
+  padding: 11px 15px;
+  border-radius: 16px;
+  font-weight: 700;
+}
+
+.quantity-input {
+  max-width: 170px;
+}
+
+/* =========================
+   OPCIONES
+========================= */
+
+.option-btn {
+  background: #f7f7f7;
+  border: 2px solid #eeeeee;
+  border-radius: 18px;
+  padding: 14px 10px;
+  font-weight: 800;
+  color: #333;
+  transition: 0.2s ease;
+}
+
+.option-btn:hover {
+  border-color: var(--naranja);
+}
+
+.btn-check:checked + .option-btn {
+  background: var(--rojo);
+  color: #fff;
+  border-color: var(--rojo);
+  box-shadow: 0 12px 26px rgba(214, 40, 40, 0.25);
+}
+
+/* =========================
+   FORMULARIOS
+========================= */
+
+.form-control,
+.form-select {
+  border-radius: 17px;
+  border: 1px solid #dddddd;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--naranja);
+  box-shadow: 0 0 0 0.2rem rgba(251, 133, 0, 0.18);
+}
+
+.form-check-input {
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: var(--rojo);
+  border-color: var(--rojo);
+}
+
+/* =========================
+   TRANSFERENCIA
+========================= */
+
+.transfer-box {
+  background: #eef9f1;
+  border: 1px solid rgba(25, 135, 84, 0.25);
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.transfer-icon {
+  min-width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--verde);
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.account-info {
+  display: grid;
+  gap: 12px;
+}
+
+.account-info div {
+  background: #f4fbf6;
+  border: 1px solid rgba(25, 135, 84, 0.17);
+  border-radius: 18px;
+  padding: 14px 16px;
+}
+
+.account-info span {
+  display: block;
+  color: #6c757d;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.account-info strong {
+  display: block;
+  color: #111;
+  word-break: break-word;
+}
+
+/* =========================
+   RESUMEN
+========================= */
+
+.summary-card {
+  background:
+    linear-gradient(180deg, #242424, #111111);
+  color: #fff;
+  top: 20px;
+}
+
+.summary-box {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 22px;
+  padding: 18px;
+}
+
+.summary-row,
+.total-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.summary-row {
+  margin-bottom: 12px;
+}
+
+.summary-title {
+  color: var(--amarillo);
+  font-weight: 900;
+}
+
+.total-row {
+  font-size: 1.1rem;
+}
+
+.total-row strong {
+  color: var(--amarillo);
+  font-size: 1.4rem;
+}
+
+.summary-card .text-muted {
+  color: rgba(255,255,255,0.72) !important;
+}
+
+.summary-card hr {
+  border-color: rgba(255,255,255,0.18);
+}
+
+.btn-whatsapp {
+  background: var(--whatsapp);
+  border: none;
+  color: #fff;
+  font-weight: 900;
+  padding: 15px 18px;
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.24);
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  color: #fff;
+}
+
+/* =========================
+   ALERTAS
+========================= */
+
+#alertPlaceholder .alert {
+  border: 0;
+  border-radius: 18px;
+  font-weight: 700;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  background: #111;
+  color: #fff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 576px) {
+  .min-vh-hero {
+    min-height: auto;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .hero-food-card {
+    min-height: 280px;
+    width: 100%;
+  }
+
+  .burger-emoji {
+    font-size: 7rem;
+  }
+
+  .hero-food-card::before {
+    font-size: 2.4rem;
+  }
+
+  .product-icon {
+    min-width: 62px;
+    height: 62px;
+    font-size: 2rem;
+    border-radius: 20px;
+  }
+
+  .quantity-input {
+    max-width: 100%;
+  }
+
+  .card-body {
+    padding: 22px !important;
+  }
+
+  .display-3 {
+    font-size: 2.7rem;
+  }
+}
