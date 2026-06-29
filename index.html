@@ -31,7 +31,7 @@
       <div class="row align-items-center min-vh-hero">
         <div class="col-lg-7 text-center text-lg-start">
           <span class="badge hero-badge mb-3">
-            🔥 Hechas al carbón
+            🔥 Hechas al carbón · Abiertos viernes, sábado y domingo
           </span>
 
           <h1 class="display-3 fw-black text-white mb-3">
@@ -99,8 +99,8 @@
 
         <div class="col-6 col-md-3">
           <div class="benefit-card">
-            <div class="benefit-icon">🔥</div>
-            <p>Sabor casero y al carbón</p>
+            <div class="benefit-icon">🗓️</div>
+            <p>Viernes, sábado y domingo</p>
           </div>
         </div>
       </div>
@@ -123,6 +123,7 @@
       <div id="alertPlaceholder"></div>
 
       <div class="row g-4">
+
         <!-- IZQUIERDA -->
         <div class="col-lg-7">
 
@@ -137,9 +138,11 @@
                     <span class="mini-badge bg-danger-subtle text-danger">
                       Sirloin
                     </span>
+
                     <span class="mini-badge bg-warning-subtle text-dark">
                       Al carbón
                     </span>
+
                     <span class="mini-badge bg-success-subtle text-success">
                       Incluye papas
                     </span>
@@ -183,7 +186,7 @@
               </h3>
 
               <p class="text-muted mb-3">
-                El paquete ya incluye papas. Marca solo lo que quieras quitar.
+                El paquete ya incluye papas. Marca solo lo que quieras quitar o si no quieres picante.
               </p>
 
               <div class="row g-3">
@@ -234,12 +237,25 @@
                     Sin queso
                   </label>
                 </div>
+
+                <div class="col-12">
+                  <input
+                    type="checkbox"
+                    class="btn-check personalizacion"
+                    id="sinPicante"
+                    data-label="Sin picante"
+                  />
+                  <label class="btn option-btn w-100" for="sinPicante">
+                    Sin picante 🌶️
+                  </label>
+                </div>
               </div>
 
               <div class="mt-4">
                 <label for="notas" class="form-label fw-semibold">
                   Notas adicionales
                 </label>
+
                 <textarea
                   id="notas"
                   class="form-control"
@@ -275,6 +291,7 @@
                       role="switch"
                       id="agregarChivacola"
                     />
+
                     <label class="form-check-label fw-semibold" for="agregarChivacola">
                       Agregar Chivacola
                     </label>
@@ -307,7 +324,10 @@
 
               <div class="row g-3">
                 <div class="col-md-6">
-                  <label for="nombre" class="form-label fw-semibold">Nombre *</label>
+                  <label for="nombre" class="form-label fw-semibold">
+                    Nombre *
+                  </label>
+
                   <input
                     type="text"
                     class="form-control form-control-lg"
@@ -317,7 +337,10 @@
                 </div>
 
                 <div class="col-md-6">
-                  <label for="telefono" class="form-label fw-semibold">Teléfono</label>
+                  <label for="telefono" class="form-label fw-semibold">
+                    Teléfono
+                  </label>
+
                   <input
                     type="tel"
                     class="form-control form-control-lg"
@@ -330,6 +353,7 @@
                   <label for="metodoEntrega" class="form-label fw-semibold">
                     Método de entrega
                   </label>
+
                   <select id="metodoEntrega" class="form-select form-select-lg">
                     <option value="Entrega a domicilio">Entrega a domicilio</option>
                     <option value="Recoger pedido">Recoger pedido</option>
@@ -342,6 +366,7 @@
                       <label for="direccion" class="form-label fw-semibold">
                         Dirección de entrega *
                       </label>
+
                       <textarea
                         id="direccion"
                         class="form-control"
@@ -354,6 +379,7 @@
                       <label for="referencias" class="form-label fw-semibold">
                         Referencias del domicilio
                       </label>
+
                       <textarea
                         id="referencias"
                         class="form-control"
@@ -368,6 +394,7 @@
                   <label for="metodoPago" class="form-label fw-semibold">
                     Método de pago
                   </label>
+
                   <select id="metodoPago" class="form-select form-select-lg">
                     <option value="Efectivo">Efectivo</option>
                     <option value="Transferencia">Transferencia</option>
@@ -378,6 +405,7 @@
                   <label for="pagoCon" class="form-label fw-semibold">
                     ¿Con cuánto paga?
                   </label>
+
                   <input
                     type="text"
                     class="form-control form-control-lg"
@@ -404,14 +432,19 @@
                       </div>
 
                       <div>
-                        <p class="mb-1 fw-bold">Datos para transferencia</p>
+                        <p class="mb-1 fw-bold">
+                          Datos para transferencia
+                        </p>
+
                         <p class="mb-1">
                           <strong>Banco:</strong> BBVA
                         </p>
+
                         <p class="mb-1">
                           <strong>Cuenta/CLABE:</strong>
                           <span id="cuentaTexto">012854015496767584</span>
                         </p>
+
                         <p class="mb-0">
                           <strong>Nombre:</strong> Mario Imanol Jimenez Bibiano
                         </p>
@@ -423,45 +456,12 @@
               </div>
             </div>
           </div>
-
-          <!-- CUENTA AFUERA -->
-          <div class="card account-card shadow-sm" id="cuentaTransferencia">
-            <div class="card-body p-4">
-              <h3 class="h5 fw-bold mb-3">
-                <i class="bi bi-credit-card-2-front me-2"></i>
-                Cuenta para transferencia
-              </h3>
-
-              <p class="text-muted mb-3">
-                También puedes guardar estos datos por si eliges pagar por transferencia.
-              </p>
-
-              <div class="account-info">
-                <div>
-                  <span>Banco</span>
-                  <strong>BBVA</strong>
-                </div>
-
-                <div>
-                  <span>Cuenta/CLABE</span>
-                  <strong>012854015496767584</strong>
-                </div>
-
-                <div>
-                  <span>Nombre</span>
-                  <strong>Mario Imanol Jimenez Bibiano</strong>
-                </div>
-              </div>
-
-              <p class="small text-muted mt-3 mb-0">
-                Recomendación: si eliges transferencia, puedes hacerla al entregar el pedido o cuando se confirme por WhatsApp.
-              </p>
-            </div>
-          </div>
         </div>
 
         <!-- DERECHA / RESUMEN -->
         <div class="col-lg-5">
+
+          <!-- RESUMEN STICKY -->
           <div class="card summary-card shadow sticky-lg-top">
             <div class="card-body p-4">
               <h3 class="h4 fw-bold mb-3">
@@ -525,9 +525,46 @@
               </p>
             </div>
           </div>
+
         </div>
 
       </div>
+
+      <!-- CUENTA AFUERA DEL ROW PRINCIPAL PARA QUE EL STICKY NO LA TAPE EN PC -->
+      <div class="card account-card shadow-sm mt-4" id="cuentaTransferencia">
+        <div class="card-body p-4">
+          <h3 class="h5 fw-bold mb-3">
+            <i class="bi bi-credit-card-2-front me-2"></i>
+            Cuenta para transferencia
+          </h3>
+
+          <p class="text-muted mb-3">
+            También puedes guardar estos datos por si eliges pagar por transferencia.
+          </p>
+
+          <div class="account-info">
+            <div>
+              <span>Banco</span>
+              <strong>BBVA</strong>
+            </div>
+
+            <div>
+              <span>Cuenta/CLABE</span>
+              <strong>012854015496767584</strong>
+            </div>
+
+            <div>
+              <span>Nombre</span>
+              <strong>Mario Imanol Jimenez Bibiano</strong>
+            </div>
+          </div>
+
+          <p class="small text-muted mt-3 mb-0">
+            Recomendación: si eliges transferencia, puedes hacerla al entregar el pedido o cuando se confirme por WhatsApp.
+          </p>
+        </div>
+      </div>
+
     </div>
   </main>
 
@@ -536,7 +573,7 @@
     <div class="container">
       <p class="mb-1 fw-bold">La Hamburguesita 🔥</p>
       <p class="mb-0 small">
-        Hamburguesas de sirloin al carbón con papas.
+        Hamburguesas de sirloin al carbón con papas. Abiertos viernes, sábado y domingo.
       </p>
     </div>
   </footer>
